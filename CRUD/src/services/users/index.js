@@ -58,7 +58,8 @@ router.put("/:idu", (req, res) => {
 //5. DELETE
 
 router.delete("/:idu", (req, res) => {
-    const filteredUsersArray = usersDB.filter(user => user.id !== req.params.idu)
+    const usersDB = readFile("users.json")
+    const filteredUsersArray = usersDB.filter(user => user.ID !== req.params.idu)
     fs.writeFileSync(path.join(__dirname, "users.json"), JSON.stringify(filteredUsersArray))
 
     res.send(filteredUsersArray)
