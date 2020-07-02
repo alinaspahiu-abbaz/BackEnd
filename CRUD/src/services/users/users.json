@@ -1,14 +1,1 @@
-[
-    {
-        "name": "Alina Spahiu",
-        "profession": "full-stac developer",
-        "student": "Yes",
-        "ID": "4ynngd7skbz9kzp5"
-    },
-    {
-        "name": "Hasan Abbaz",
-        "profession": "Professor",
-        "student": "No",
-        "ID": "4ynng9wgkbz9kjox"
-    }
-]
+[{"name":"Alina Spahiu Abbaz","profession":"Full-stack Developer","ID":"4ynngd7skbz9kzp5"}]
