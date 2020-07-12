@@ -6,6 +6,22 @@ const badRequestHandler = (err, req, res, next) => {
     next(err)
 }
 
+const unauthorizedHandler = (err, req, res, next) => {
+    if(err.httpStatusCode === 401) {
+        res.status(404).send("unauthorized!!")
+    } 
+    next(err)
+
+}
+
+const forbiddenHandler = (err, req, res, next) => {
+    if(err.httpStatusCode === 403) {
+        res.status(404).send("Forbidden!")
+    } 
+    next(err)
+    
+}
+
 const notFoundHandler = (err, req, res, next) => {
     if( err.httpStatusCode === 404)
     {
@@ -25,6 +41,8 @@ const genericErrorHandler = (err, req, res, next) => {
 module.exports = {
     badRequestHandler,
     notFoundHandler,
-    genericErrorHandler
+    genericErrorHandler,
+    forbiddenHandler, 
+    unauthorizedHandler
 }
 
