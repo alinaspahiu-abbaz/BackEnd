@@ -1,16 +1,25 @@
 const express = require("express")
 const uniqid = require("uniqid")
+const path = require("path")
 const{check, validationResult, sanitizeBody} = require("express-validator")
-const {getProducts, writeProducts} = require("../../lib")
+const {getProducts, writeProducts, getRev} = require("../../lib")
 
 const productsRouter = express.Router()
 
+const productsFolder = path.join(__dirname, "../../data/products.json")
 // 1. GET all:
 productsRouter.get("/", async(req, res, next) => {
      try{
-          const products = await getProducts()
-          res.send(products)
-          console.log(products)
+         //const products = await getProducts()
+         const products = await getProducts(productsFolder)
+         res.send({numberOfItem: products.length, products})
+         if(products.length > 0){
+           
+            console.log(products.length)
+         } else if(!products){
+                            res.status(404).send("No such a directory here!")
+                          } else { res.status(404).send("No product found!")}
+         
         } 
 
     catch(error) 
@@ -89,7 +98,7 @@ productsRouter.put("/:pid", async(req, res, next) => {
 
         const productFound = products.find(prod =>prod.id === req.params.pid)
 
-        if(productsRouter) {
+        if(productFound) {
             const position = products.indexOf(productFound)
             const body = req.body
             delete body.createdAt
@@ -132,6 +141,27 @@ productsRouter.delete("/:pid", async(req, res, next) => {
         }
     } catch(error) {
         console.log(error)
+        const err = new Error("Generic Error Happend!")
+        next(err)
+    }
+})
+
+// get the full list of reviews, and filter them by productID
+productsRouter.get("/:id/reviews", async(req, res, next) =>{
+try{ // get reviews
+     const reviews = await getRev()
+     // filter reviews
+     const filteredReviewsByProductID = reviews.filter(rev => rev.productId === req.params.id)
+    // ⇩⇩⇩ nxjerr ID e produktit qe ka reviewa. Nese nji produkt ka 3 reviewa, e nxjerr 3 here ate id te produktit.
+    //const filteredReviewsByProductID = reviews.filter(rev => {console.log(rev.productId )})
+  
+     
+     // send reviwes
+     res.send(filteredReviewsByProductID)
+    }
+    catch(error) {
+        console.log(error)
+        const err = new Error("Generic Error Happend!")
         next(err)
     }
 })
