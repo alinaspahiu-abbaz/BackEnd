@@ -1,0 +1,7 @@
+
+date: Sun Jun 28 2020 18:54:28 GMT+0200 (Central European Summer Time) - method: GET -> url:/hello
+date: Sun Jun 28 2020 18:56:34 GMT+0200 (Central European Summer Time) - method: GET -> url:/books/
+date: Sun Jun 28 2020 18:56:46 GMT+0200 (Central European Summer Time) - method: GET -> url:/books/123
+date: Sun Jun 28 2020 18:57:18 GMT+0200 (Central European Summer Time) - method: POST -> url:/books/
+date: Sun Jun 28 2020 18:57:40 GMT+0200 (Central European Summer Time) - method: PUT -> url:/books/126
+date: Sun Jun 28 2020 18:57:56 GMT+0200 (Central European Summer Time) - method: DELETE -> url:/books/126
