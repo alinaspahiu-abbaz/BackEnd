@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "rate": 5,
+        "comment": " Woow this one!",
+        "productId": "4ynng1p0kc4fqmuq",
+        "id": "4ynngdsokciygx31",
+        "createdAt": "2020-07-12T10:49:17.436Z",
+        "updatedAt": "2020-07-12T10:49:17.436Z"
+    },
+    {
+        "rate": 5,
+        "comment": "Bestwatch ever. Loving it!",
+        "productId": "4ynngapwkcbnmx83",
+        "id": "4ynngcpckciyjixj",
+        "createdAt": "2020-07-12T10:51:19.062Z",
+        "updatedAt": "2020-07-12T10:51:19.062Z"
+    },
+    {
+        "rate": 1,
+        "comment": "Worst watch!",
+        "productId": "4ynngapwkcbnmx83",
+        "id": "4ynng86kkciyjt9t",
+        "createdAt": "2020-07-12T10:51:32.464Z",
+        "updatedAt": "2020-07-12T10:51:32.464Z"
+    }
+]
