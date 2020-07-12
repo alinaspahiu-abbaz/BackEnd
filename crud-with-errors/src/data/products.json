@@ -1,1 +1,29 @@
-[{"name":"Note 5","category":"SmartPhone","description":"best phone","price":200,"createdAt":"2020-06-29T18:09:10.559Z","updatedAt":"2020-06-29T18:09:10.559Z","id":"4ynng9v8kc0tgjhc"},{"name":"Nokia","category":"SmartPhone","description":"best phone","price":200,"createdAt":"2020-07-02T06:56:11.569Z","updatedAt":"2020-07-02T06:56:11.569Z","id":"4ynng1p0kc4fqmuq"}]
+[
+    {
+        "name": "Nokia",
+        "category": "SmartPhone",
+        "description": "best phone",
+        "price": 200,
+        "createdAt": "2020-07-02T06:56:11.569Z",
+        "updatedAt": "2020-07-02T06:56:11.569Z",
+        "id": "4ynng1p0kc4fqmuq"
+    },
+    {
+        "name": "smart watch",
+        "category": "SmartPhone",
+        "description": "best phone",
+        "price": 200,
+        "createdAt": "2020-07-07T08:11:38.546Z",
+        "updatedAt": "2020-07-07T08:11:38.546Z",
+        "id": "4ynngapwkcbnmx83"
+    },
+    {
+        "name": "Apple",
+        "category": "SmartPhone",
+        "description": "worst phone in the world",
+        "price": 1000,
+        "createdAt": "2020-07-12T13:14:25.310Z",
+        "updatedAt": "2020-07-12T13:14:25.310Z",
+        "id": "4ynngdo4kcj3nk4f"
+    }
+]
