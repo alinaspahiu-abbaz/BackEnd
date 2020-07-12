@@ -10,5 +10,5 @@ module.exports = {
     writeProducts: async(data) => writeDB(productsPath, data),
 
     getRev: async() => readDB(revPath),
-    writeRev: async()=> write(revPath, data)
+    writeRev: async(data)=> writeDB(revPath, data)
 }
